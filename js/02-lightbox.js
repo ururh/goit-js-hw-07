@@ -10,19 +10,11 @@ const li = galleryItems.map(({preview, original, description}) => `
 const ul = document.querySelector('.gallery')
 ul.insertAdjacentHTML("afterbegin", li)
 
-ul.addEventListener('click', onClick)
-
-function onClick(e) {
-    e.preventDefault();
-    if (e.target === e.currentTarget) return;
 
 new SimpleLightbox('.gallery a', {
-captions: true, 
-captionsData: 'alt',
-captionDelay: 250,
+    captions: true,
+    captionsData: 'alt',
+    captionDelay: 250,
     animationSpeed: 400,
-    navText: ['←', '→'],
-});
-}
-
-
+    navText: ['←', '→']
+    });
